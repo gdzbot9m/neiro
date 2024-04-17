@@ -57,5 +57,18 @@
     <footer>
         <p>&copy; 2024 | Моя визитка</p>
     </footer>
+
+    <script>
+        const body = document.querySelector('body');
+        const button = document.createElement('button');
+        button.textContent = 'Изменить цвет фона';
+
+        button.addEventListener('click', function() {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            body.style.backgroundColor = '#' + randomColor;
+        });
+
+        document.body.appendChild(button);
+    </script>
 </body>
 </html>
